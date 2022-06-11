@@ -1,0 +1,51 @@
+.container{
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main{
+  width: 100%;
+  max-width: 400px;
+}
+.js-main__output{
+  background-color: #070707;
+  font-weight: bold;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  transition: all .2s ease-in;
+  user-select: all;
+  margin-bottom: 10px;
+}
+.js-main__output:hover{
+  background: #050505;
+  cursor: pointer;
+}
+.js-main__output::selection{
+  background-color: transparent;
+}
+
+
+.js-main__options{
+  padding-right: 75px;
+  margin-bottom: 20px;
+}
+.js-main__options-item{
+  display: flex;
+  justify-content: space-between;
+}
+.btn{
+  color: #000000;
+  padding: 8px 12px;
+}
+.btn-generate{
+  width: 100%;
+}
+.input--text{
+  color: #000000;
+  margin-bottom: 10px;
+}
+.btn-generate{}

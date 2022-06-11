@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/default.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>MazuSad - Password Generator</title>
+</head>
+<body>
+
+  <div class="container">
+    <main class="main">
+      <div class="js-main__output" title="click to copy">Click on the button</div>
+      <ul class="js-main__options">
+          <li class="js-main__options-item">
+            <label for="passwordLength">Password Length</label>
+            <input class="input input--text" type="number" min="8" max="36" value="12" name="passwordLength"
+              id="passwordLength">
+          </li>
+          <li class="js-main__options-item">
+            <label for="useUpperCase">Use Uppercase letters</label>
+            <input class="input" type="checkbox" name="useUpperCase" id="useUpperCase">
+          </li>
+          <li class="js-main__options-item">
+            <label for="useLowerCase">Use Lowercase letters</label>
+            <input type="checkbox" name="useLowerCase" id="useLowerCase" checked>
+          </li>
+          <li class="js-main__options-item">
+            <label for="useNumbers">Use numbers</label>
+            <input class="input" type="checkbox" name="useNumbers" id="useNumbers" checked>
+          </li>
+          <li class="js-main__options-item">
+            <label for="useSymbols">Use special symbols</label>
+            <input class="input" type="checkbox" name="useSymbols" id="useSymbols">
+          </li>
+      </ul>
+      <button class="btn btn-generate">Generate</button>
+    </main>
+  </div>
+  
+  <script src="./assets/js/main.js"></script>
+</body>
+</html>
