@@ -17,6 +17,7 @@ const number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",];
 const symbols = ["[",  "]", "%",  "\^",  "@", "\$",  "\.",  "\|",  "\?",  "\*",  "\+",  "\(",  "\)",];
 
 let password = '';
+let optionLength = 12
 
 
 // take random number 
@@ -89,11 +90,33 @@ function viewHTML(password) {
 // click on button "Generate"
 const generateBtn = document.querySelector(".btn-generate")
 
+const optionLengthNumber = document.querySelector("#passwordLengthNumber")
+const optionLengthRange = document.querySelector("#passwordLengthRange")
+
+optionLengthNumber.addEventListener("change", (event) => {
+  updaterLenghtPassword(event.target)
+})
+  
+optionLengthRange.addEventListener("mouseup", (event) => {
+  updaterLenghtPassword(event.target)
+})
+
+const updaterLenghtPassword = (optionLenghtChanger) => {
+  console.log(optionLenghtChanger.value, optionLength);
+  // if (optionLength !== optionLenghtChanger.value) {
+    // console.log('!==');
+  optionLength = optionLenghtChanger.value
+  optionLengthNumber.value = optionLength
+  optionLengthRange.value = optionLength
+  // } else {
+    // console.log('==');
+  // }
+}
+
 
 generateBtn.addEventListener("click", () => {
 
   // Options
-  const optionLength = document.querySelector("#passwordLength").value
   const optionUpperCase = document.querySelector("#useUpperCase").checked
   const optionLowerCase = document.querySelector("#useLowerCase").checked
   const optionNumbers = document.querySelector("#useNumbers").checked
